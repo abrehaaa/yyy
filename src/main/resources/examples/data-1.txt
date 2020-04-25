@@ -1,0 +1,20 @@
+[
+     {
+        "fname": "abebe",
+        "lname": "degu",
+        "age": 50,
+        "id": 5
+    },
+     { 
+         "fname": "mehamed",
+        "lname": "mubarek",
+        "age": 40,
+        "id": 4
+    },
+     {
+         "fname": "maru",
+        "lname": "aregew",
+        "age": 24,
+        "id": 7
+    }
+]  

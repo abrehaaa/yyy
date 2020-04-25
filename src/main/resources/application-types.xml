@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<types:mule xmlns:types="http://www.mulesoft.org/schema/mule/types">
+  <types:catalog>
+    <types:type name="new" format="json">
+      <types:shape format="weave" example="examples/data.txt"><![CDATA[%dw 2.0
+
+type new = {|
+  house: {|
+    debug: String, 
+    window: {|
+      title: String, 
+      name: String, 
+      width: Number {"typeId": "int"}, 
+      height: Number {"typeId": "int"}
+    |}, 
+    image: {|
+      src: String, 
+      name: String, 
+      hOffset: Number {"typeId": "int"}, 
+      vOffset: Number {"typeId": "int"}, 
+      alignment: String
+    |}, 
+    text: {|
+      data: String, 
+      size: Number {"typeId": "int"}, 
+      style: String, 
+      name: String, 
+      hOffset: Number {"typeId": "int"}, 
+      vOffset: Number {"typeId": "int"}, 
+      alignment: String, 
+      onMouseUp: String
+    |}
+  |}
+|} {"example": "{\\\"house\\\":{\\\"debug\\\":\\\"on\\\",\\\"window\\\":{\\\"title\\\":\\\"Sample Konfabulator Widget\\\",\\\"name\\\":\\\"main_window\\\",\\\"width\\\":500,\\\"height\\\":500},\\\"image\\\":{\\\"src\\\":\\\"Images\\/Sun.png\\\",\\\"name\\\":\\\"sun1\\\",\\\"hOffset\\\":250,\\\"vOffset\\\":250,\\\"alignment\\\":\\\"center\\\"},\\\"text\\\":{\\\"data\\\":\\\"Click Here\\\",\\\"size\\\":36,\\\"style\\\":\\\"bold\\\",\\\"name\\\":\\\"text1\\\",\\\"hOffset\\\":250,\\\"vOffset\\\":100,\\\"alignment\\\":\\\"center\\\",\\\"onMouseUp\\\":\\\"sun1.opacity = (sun1.opacity \\/ 100) * 90;\\\"}}}"}
+
+]]></types:shape>
+    </types:type>
+    <types:type name="user1" format="java">
+      <types:shape format="raml"><![CDATA[#%RAML 1.0 DataType
+type: string]]></types:shape>
+    </types:type>
+    <types:type name="xxx" format="json">
+      <types:shape format="weave" example="examples/data-1.txt"><![CDATA[%dw 2.0
+
+type xxx = Array<{|  fname: String,   lname: String,   age: Number {"typeId": "int"},   id: Number {"typeId": "int"}|}> {"example": "[{\\\"fname\\\":\\\"abebe\\\",\\\"lname\\\":\\\"degu\\\",\\\"age\\\":50,\\\"id\\\":5},{\\\"fname\\\":\\\"mehamed\\\",\\\"lname\\\":\\\"mubarek\\\",\\\"age\\\":40,\\\"id\\\":4},{\\\"fname\\\":\\\"maru\\\",\\\"lname\\\":\\\"aregew\\\",\\\"age\\\":24,\\\"id\\\":7}]"}
+
+]]></types:shape>
+    </types:type>
+    <types:type name="zx" format="json">
+      <types:shape format="weave" example="examples/data-2.txt"><![CDATA[%dw 2.0
+
+type zx = Array<{|  fname: String,   lname: String,   age: Number {"typeId": "int"},   id: Number {"typeId": "int"}|}> {"example": "[{\\\"fname\\\":\\\"abebe\\\",\\\"lname\\\":\\\"degu\\\",\\\"age\\\":50,\\\"id\\\":5},{\\\"fname\\\":\\\"mehamed\\\",\\\"lname\\\":\\\"mubarek\\\",\\\"age\\\":40,\\\"id\\\":4},{\\\"fname\\\":\\\"maru\\\",\\\"lname\\\":\\\"aregew\\\",\\\"age\\\":24,\\\"id\\\":7}]"}
+
+]]></types:shape>
+    </types:type>
+  </types:catalog>
+</types:mule>
